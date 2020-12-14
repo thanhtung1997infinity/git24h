@@ -7,7 +7,7 @@ header {
     text-transform: uppercase;
 }
 .container {
-    width: 1004px;
+    max-width: 1004px;
     margin:0 auto;
 }
 a{
@@ -18,7 +18,6 @@ a{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0.3rem;
 }
 .logo {
     padding-right: 0.5rem;
@@ -36,7 +35,6 @@ a{
     flex-direction: column;
     align-items: center;
     color: #fff;
-    padding: 0 0.2rem;
 }
 .submenu i{
     font-size: 1.1rem;
@@ -112,6 +110,7 @@ a{
     margin-top: 5px;
     padding: 0px 5px;
     font-size: 10px;
+    color: #fff;
 }
 .submenu li:hover .bongda{
     display: block;
@@ -121,7 +120,7 @@ a{
 
 .submenu li:hover .subcategory{
     display: block;
-    top: 3rem;
+    top: 45px;
     right: 0rem;
 }
 .submenu li:hover {
@@ -149,7 +148,7 @@ a{
 .subcategory ul li:hover{
     color: #fff;
 }
-/* conten-ss1 */
+/* ss1 */
 .title-header {
     display: flex;
 }
@@ -159,11 +158,6 @@ a{
 
 .content-ss1{
     display: flex;  
-}
-.ss1 {
-    width: 65%;
-    margin: 10px 4px 0px 0px;
-    font-size: 0.9rem;
 }
 .ss1 img{
     padding: 0px 10px 10px 0px;
@@ -189,14 +183,26 @@ a{
     font-size: 1.2rem;
     margin-bottom: 5px;
 }
-.body {
-    display: flex;
-}
-.widget {
-    width: auto;
-}
 .ul1-1{
     height: 3.6rem;
-    overflow-x: hidden;
+    overflow:scroll;
     background-color: #eaf8d2;
+}
+/* css body */
+.body-full {
+    display: flex;
+}
+.body-main {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 70%;
+}
+.body-main section {
+    margin: 10px 4px 0px 0px;
+    font-size: 0.9rem;
+    width: calc(50% - 5px);
+}
+.widget {
+    width: 30%;
 }
