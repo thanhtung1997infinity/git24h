@@ -165,6 +165,53 @@ a:hover{
 .subcategory ul li:hover{
     color: #fff;
 }
+/* css body */
+.body-full {
+    display: flex;
+}
+.body-main {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 70%;
+    height: fit-content;
+}
+.body-main section {
+    margin: 10px 4px 0px 0px;
+    font-size: 0.9rem;
+    width: calc(50% - 5px);
+}
+.ss-video {
+    width: 100% !important;
+}
+.ss-video h2{
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+}
+.video-main {
+    padding-right: 5px;
+    border-right:1px #BDBDBD solid;
+}
+.video-main iframe{
+    width: 100%;
+}
+
+.overflow-scroll {
+    overflow: scroll;
+    height: 15rem;
+    width: 80%;
+    padding-left: 5px;
+}
+.overflow-scroll iframe {
+    width: 50%;
+    margin-right: 5px; 
+}
+.overflow-scroll li{
+    display: flex;
+    padding: 5px 0;
+
+}
 /* ss1 */
 .title-header {
     display: flex;
@@ -205,21 +252,7 @@ a:hover{
     overflow:scroll;
     background-color: #eaf8d2;
 }
-/* css body */
-.body-full {
-    display: flex;
-}
-.body-main {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    width: 70%;
-}
-.body-main section {
-    margin: 10px 4px 0px 0px;
-    font-size: 0.9rem;
-    width: calc(50% - 5px);
-}
+
 /* widget */
 .widget {
     width: 30%;
@@ -298,4 +331,72 @@ table{
 .list-drpd {
     list-style: circle;
     list-style-position: inside;
+}
+.end-drpd{
+    display: flex;
+    justify-content: center;
+}
+.end-drpd a{
+    border: 1px solid #ddd;
+    text-decoration: none;
+    margin: 5px 2px;
+    font-size: 12px;
+    width: 28px;
+    height: 28px;
+   justify-content: center;
+    align-items: center;
+    display: flex;
+}
+/* thongtindoanhnghiep */
+.header-ttdn{
+    font-size: 17px;
+    color: #ef7930;
+    padding-left: 25px;
+    font-weight: bold;
+    text-transform: uppercase;
+
+}
+.ttdn{
+    display: flex;
+    background-color: #fff1d9;
+    border-top:#ef7930 2px solid ;
+    width: 3500px;
+    transition-duration: 0.4s;
+}
+.ttdn li{
+    display: flex;
+    flex-direction: column;
+    padding: 2px 5px 10px 40px;
+}
+.ttdn-main {
+    overflow: scroll;
+}
+/* footer */
+.footer-main table{
+background-color: #ebebeb;
+width: 100%;
+}
+.footer-main table td,th,tr{
+    color: black;
+    padding: 5px 5px;
+}
+.footer-end {
+    background-color: #78b43d;
+    text-align: center;
+    font-weight: bold;
+    color:#fff;
+}
+.footer-main p{
+    width: 998px;
+    margin: 0 auto;
+    font-size: 15px;
+    color: #7d7d7d;
+    text-align: center;
+    padding: 10px 0 0;
+}
+.footer-img {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    padding: 10px 0;
 }
