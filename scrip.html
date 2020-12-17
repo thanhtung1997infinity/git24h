@@ -1,0 +1,36 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        li {
+            list-style: none;
+        }
+    </style>
+</head>
+<body>
+    <input type="text" id="nhapvao"><br>
+    <button onclick="them()">add</button>
+    <button onclick="xoa()">delete</button>
+    <button onclick="max()">max</button>
+    <button onclick="min()">min</button>
+<ul id="theul"></ul>
+<script>
+    function them() {
+        var nhapvao = document.getElementById('nhapvao').value;
+        var theul = document.getElementById('theul');
+        var theli = document.createElement('li');
+        theul.appendChild(theli);
+        var themvao = document.createTextNode(nhapvao);
+        theli.appendChild(themvao);
+    } 
+    function xoa(){
+        var theul = document.getElementById('theul');
+        theul.removeChild(theul.firstChild);
+    }
+    
+</script>
+
+</body>
+</html>
