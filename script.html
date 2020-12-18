@@ -1,0 +1,107 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        li {
+            list-style: none;
+        }
+    </style>
+</head>
+
+<body>
+    <input type="number" id="nhapvao" required><br>
+    <button onclick="add()" id="enter">add</button>
+    <button onclick="xoa()" id="delete">xoa</button>
+    <button onclick="max()">max</button>
+    <button onclick="min()">min</button>
+    <button onclick="chan()">so chan</button>
+    <button onclick="le()">so le</button>
+    <ul id="theul"></ul>
+    <div id="mang"></div>
+    <div id="chanle"></div>
+    <script>
+        let mang = [];
+        var k = [];
+        var sochan = [];
+        var sole = [];
+        // var nhapvao = document.getElementById("nhapvao");
+        // nhapvao.addEventListener("keyup", function (event) {
+        //     if (event.keyCode === 13) {
+        //         event.preventDefault();
+        //         document.getElementById("enter").click();
+        //     }
+        // });
+
+        function add() {
+
+            var x = document.getElementById('nhapvao').validity.valid;
+            if (x == false) {
+                alert("vui long nhap lai");
+            }
+            else {
+                
+                var nhapvao = document.getElementById("nhapvao").value;
+                
+                mang.push(nhapvao);
+                k = mang.map(i=>Number(i));
+            console.log(k)
+                var theul = document.getElementById("theul");
+                var theli = document.createElement("li");
+                theul.appendChild(theli);
+                var noidung = document.createTextNode(nhapvao);
+                theli.appendChild(noidung);
+                document.getElementById('nhapvao').value = ''
+            }
+
+        }
+        function xoa() {
+            var theul = document.getElementById('theul');
+            theul.removeChild(theul.firstChild);
+            mang.shift();
+        }
+        
+        function max() {
+        var dem = k.length
+            var i
+            var max = k[0];
+            for (i = 0; i < dem; i++) {
+                if (max <= k[i]) {
+                    max = k[i];
+                }
+                
+            }
+            document.getElementById("mang").innerHTML =  max;
+        }
+        function min() {
+            var dem = mang.length, i, min = mang[0];
+            for (i = 0; i < dem; i++) {
+                if (min > mang[i]) {
+                    min = mang[i];
+                }
+            }
+            document.getElementById("mang").innerHTML = "so nho nhat trong cac so la: " + min;
+        }
+        function chan() {
+            var i, dem = mang.length;
+            for (i = 0; i < dem; i++) {
+                if (mang[i] % 2 == 0) {
+                    sochan.push(mang[i]);
+                    document.getElementById("chanle").innerHTML = sochan;
+                }
+                else {
+                    sole.push (mang[i]);
+                }
+            }
+        }
+        function le(){
+            document.getElementById("chanle").innerHTML = sole;
+        }
+
+    </script>
+
+</body>
+
+</html>
